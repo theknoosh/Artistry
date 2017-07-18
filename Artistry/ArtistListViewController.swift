@@ -11,7 +11,7 @@
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS /Users/darrellpayne/Dropbox/iPhone/Artistry demo/Artistry/ArtistListViewController.swiftOR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -30,6 +30,8 @@ class ArtistListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 140
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,14 +47,17 @@ extension ArtistListViewController: UITableViewDataSource {
     return artists.count
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+  func tableView(_ tableView: UITableView,
+                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",
+                                             for: indexPath) as! ArtistTableViewCell
     
     let artist = artists[indexPath.row]
-    
-    cell.textLabel?.text = artist.bio
-    
+    cell.bioLabel.text = artist.bio
+    cell.bioLabel.textColor = UIColor(white: 114/255, alpha: 1)
     return cell
   }
+  
 }
 
