@@ -54,8 +54,15 @@ extension ArtistListViewController: UITableViewDataSource {
                                              for: indexPath) as! ArtistTableViewCell
     
     let artist = artists[indexPath.row]
+    cell.artistImageView.image = artist.image
+    cell.nameLabel.text = artist.name
     cell.bioLabel.text = artist.bio
     cell.bioLabel.textColor = UIColor(white: 114/255, alpha: 1)
+    cell.nameLabel.backgroundColor = UIColor(red: 1, green: 152/255, blue: 0, alpha: 1)
+    cell.nameLabel.textColor = UIColor.white
+    cell.nameLabel.textAlignment = .center
+    cell.selectionStyle = .none
+    
     return cell
   }
   

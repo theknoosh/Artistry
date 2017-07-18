@@ -53,13 +53,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Q6P-Ou-lMI" secondAttribute="bottom" id="9Vh-Oj-eid"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Q6P-Ou-lMI" secondAttribute="bottom" priority="250" id="9Vh-Oj-eid"/>
                                                 <constraint firstItem="Q6P-Ou-lMI" firstAttribute="centerX" secondItem="e3M-EA-y9s" secondAttribute="centerX" id="GPo-R6-SCl"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="AfE-xa-Xfm" secondAttribute="bottom" id="GeO-5B-sPG"/>
                                                 <constraint firstItem="e3M-EA-y9s" firstAttribute="width" secondItem="AfE-xa-Xfm" secondAttribute="width" id="HMV-6E-o1X"/>
                                                 <constraint firstItem="e3M-EA-y9s" firstAttribute="top" secondItem="tZj-Bl-H4M" secondAttribute="top" id="Ihm-ai-6aN"/>
                                                 <constraint firstItem="Q6P-Ou-lMI" firstAttribute="width" secondItem="e3M-EA-y9s" secondAttribute="width" id="Ljc-2c-rc0"/>
                                                 <constraint firstItem="AfE-xa-Xfm" firstAttribute="top" secondItem="tZj-Bl-H4M" secondAttribute="topMargin" id="NIc-Ez-IsG"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Q6P-Ou-lMI" secondAttribute="bottom" constant="8.5" id="OYJ-va-Qe0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="AfE-xa-Xfm" secondAttribute="trailing" constant="8" id="heE-Fx-MsT"/>
                                                 <constraint firstItem="e3M-EA-y9s" firstAttribute="leading" secondItem="tZj-Bl-H4M" secondAttribute="leading" multiplier="0.5" id="jjo-aW-2SM"/>
                                                 <constraint firstItem="AfE-xa-Xfm" firstAttribute="leading" secondItem="e3M-EA-y9s" secondAttribute="trailing" constant="16" id="pRO-mp-Flr"/>
